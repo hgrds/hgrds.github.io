@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("swiper.css");
+
+:root {
+  --primary: #b6895b;
+
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: #fff;
+}
+
+/* nav */
+
+.navbar {
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0rem 3.2rem;
+  transition: ease-in-out 0.2s;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: linear 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* section */
+
+.coffee1{
+  margin-top: 3.5rem;
+  min-height: 100vh;
+  align-items: center;
+  background-image: url("../images/2.jpg");
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  
+}
+
+.coffee1 .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.coffee1 .content h1 {
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+  line-height: 1.2;
+}
+
+.coffee1 .content h1 span {
+  color: var(--primary);
+}
+
+.coffee1 .content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+  mix-blend-mode: difference;
+}
+
+.coffee1 .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+.coffee1 .content .cta:hover {
+  background-color: #6a5035;
+}
+
+/* header */
+
+.coffee2 h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+
+.coffee2 h2 span{
+   color: var(--primary);
+}
+
+/* article */
+article{
+  flex:1;
+  width:90%;
+  margin:10px auto;
+  display:flex;
+  flex-direction: column;
+  
+}
+
+.imgb{
+  flex:1;
+  order:1;
+  background:gray;
+}
+
+.imgb img{
+  width: 100%;   
+  height: 100%;   
+  object-fit:cover;
+  float:left;
+}
+
+.textb{
+  flex:1;
+  order:2;
+  color:var(--whitetheme);
+  margin:auto;
+}
+
+.textb h3{
+  font-size:min(10vw, 35px);
+  padding:30px 0px 0px 30px;
+}
+
+.textb p{
+  font-size:max(1vw, 20px);
+ 
+  padding:30px;
+  line-height:2em;
+}
+
+
+/* For tablets */
+@media only screen and (min-width: 768px) {
+article{
+  flex-direction: row;
+}
+}
+
+ 
+
+/* For pc */
+@media only screen and (min-width: 1200px) {
+
+.imgb:nth-child(2n){
+  order:2;
+}
+
+.textb h3{
+  padding:0px 0px 0px 30px;
+}
+
+}
+
